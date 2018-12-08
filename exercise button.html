@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+			button {
+			padding: 10px;
+			background-color: aqua;
+			border: 2px dashed deeppink;
+			font-size: 20px;
+			font-style: bold;
+			color: deeppink;
+			position: relative;
+			}
+			body{
+				height: 500px;
+				width: 900px;
+			}
+		</style>
+</head>
+<body>
+
+	<button id="elusive" class="mouse-Count">Try to click :P</button>
+
+	<script type="text/javascript">
+		let button = document.getElementById('elusive');
+		let countMouse = document.getElementsByClassName('mouse-Count');
+		let count =0;
+			function randomPosition(){
+				let top = Math.floor(Math.random()*100);
+				let left = Math.floor(Math.random()*100);
+				button.style.top = `${top}%` ;
+				button.style.left = `${left}%`;
+				}
+			button.onmouseover = function(){
+				if (count<10){
+				countMouse.innerHTML = count;
+				count = count +1;
+				console.log('clicked', count);
+				elusive.classList.add('runAway');
+				button.style.position = randomPosition();
+				}
+				else{
+					count=10;
+				}
+			}
+			button.onmouseout = function(){
+				button.classList.remove('runAway');
+			}
+			button.onclick = function(){
+				elusive.innerHTML = ('<a href="https://www.prague.eu/en">Now I am link - click</a>');
+			}
+	</script>
+</body>
+</html>
