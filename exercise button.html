@@ -17,6 +17,7 @@
 				height: 500px;
 				width: 900px;
 			}
+
 		</style>
 </head>
 <body>
@@ -43,14 +44,16 @@
 				}
 				else{
 					count=10;
+					button.innerHTML = ('<a href="https://www.prague.eu/en">I\'am waiting now - click</a>');
+
 				}
 			}
-			button.onmouseout = function(){
-				button.classList.remove('runAway');
-			}
-			button.onclick = function(){
-				elusive.innerHTML = ('<a href="https://www.prague.eu/en">Now I am link - click</a>');
-			}
+			// button.onmouseout = function(){
+			// 	button.classList.remove('runAway');
+			// }
+			// button.onclick = function(){
+			// 	button.innerHTML = ('<a href="https://www.prague.eu/en">Now I am link - click</a>');
+			// }
 	</script>
 </body>
 </html>
